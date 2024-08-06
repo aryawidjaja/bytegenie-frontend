@@ -1,0 +1,66 @@
+.sidebar {
+    transition: width 0.3s ease, padding 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    width: 280px; /* Set a fixed width for the sidebar */
+  }
+  
+  .sidebar.collapsed {
+    width: 60px;
+    padding: 8px;
+  }
+  
+  .sidebar.collapsed .flex {
+    flex-direction: column;
+  }
+  
+  .sidebar.collapsed h3 {
+    display: none;
+  }
+  
+  .sidebar.collapsed ul {
+    display: none;
+  }
+  
+  .sidebar .group-title {
+    font-size: 0.875rem; /* smaller font size */
+    font-weight: normal; /* not bold */
+    color: #6b7280; /* faded color */
+    margin-top: 1.5rem; /* Increase the distance gap between groups */
+    margin-bottom: 0.5rem; /* Increase the gap between title and data */
+    text-align: left; /* ensure text is left-aligned */
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar .conversation-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left; /* left-align text */
+    padding: 0.5rem 0; /* Increase padding for better spacing */
+    cursor: pointer; /* Indicate that this is clickable */
+  }
+  
+  .sidebar .conversation-item span {
+    flex-grow: 1;
+    text-align: left; /* ensure text is left-aligned */
+    overflow: hidden; /* Handle text overflow */
+    text-overflow: ellipsis; /* Show ellipsis for overflow text */
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+  
+  .sidebar .conversation-item:hover {
+    background-color: #e2e8f0; /* lighter hover effect */
+    border-radius: 4px;
+  }
+  
+  .sidebar .conversation-item.active {
+    background-color: #cbd5e0; /* darker active effect */
+    border-radius: 4px;
+  }
+  

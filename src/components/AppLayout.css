@@ -1,0 +1,11 @@
+.app-layout {
+    display: flex;
+    height: 100vh; /* Full height */
+  }
+  
+  .flex-1 {
+    flex: 1; /* Take remaining space */
+    display: flex;
+    flex-direction: column;
+  }
+  
