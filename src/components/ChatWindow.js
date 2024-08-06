@@ -36,7 +36,7 @@ const ChatWindow = ({ conversationId, onNewQuery }) => {
       const response = await axios.post('http://127.0.0.1:5000/query', { query });
       const botResponse = { sender: 'bot', text: response.data.response, timestamp: new Date().toLocaleTimeString() };
       setMessages([...messages, newMessage, botResponse]);
-      onNewQuery(); // call onNewQuery to refresh the sidebar
+      onNewQuery();
     } catch (error) {
       console.error('Error fetching response:', error);
     }

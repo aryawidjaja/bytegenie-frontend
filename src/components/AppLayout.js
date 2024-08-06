@@ -18,7 +18,7 @@ const AppLayout = () => {
   };
 
   const handleNewQuery = () => {
-    setNewQuery(!newQuery); // toggle the newQuery state
+    setNewQuery(!newQuery);
   };
 
   return (
@@ -26,7 +26,7 @@ const AppLayout = () => {
       <Sidebar
         onSelectConversation={handleSelectConversation}
         onDeleteConversation={handleDeleteConversation}
-        onNewQuery={newQuery} // pass the newQuery state to Sidebar
+        onNewQuery={newQuery}
       />
       <div className="flex-1">
         <ChatWindow conversationId={selectedConversation} onNewQuery={handleNewQuery} />
